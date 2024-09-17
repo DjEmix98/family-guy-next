@@ -1,15 +1,6 @@
 import Link from "next/link";
 import Image from 'next/image'
-import { Character } from "@/type/character.type";
-
-async function getAllCharacters(): Promise<Character[]> {
-  const data = await fetch(`http://localhost:3000/api/characters`)
-
-  // if (!data.ok) {
-  //   throw new Error('Failed to fetch data')
-  // }
-  return data.json();
-}
+import { getAllCharacters } from "@/lib/characters";
 
 export default async function Home() {
   const data = await getAllCharacters()
