@@ -8,15 +8,15 @@ export default async function Page() {
     const data = await getRandomQuizQuestion()
 
     return (
-        <section className="flex flex-col gap-5 py-5 md:flex-row-reverse md:justify-between">
+        <section className="flex flex-col gap-32 py-5 md:flex-row-reverse md:justify-center">
             <div className="relative overflow-hidden rounded-2xl">
                 <div className="md:w-[24rem]">
                     <Image src="/wallpaper.jpg" alt="" width={700} height={700} />
                 </div>
-                <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent md:bg-gradient-to-r"></div>
+                <div className="absolute top-0 bottom-0 left-0 right-0"></div>
             </div>
 
-            <div className="md:w-[50%] flex flex-col gap-5">
+            <div className="md:w-[30%] flex flex-col gap-5">
                 <h1 className="text-2xl font-semibold">Family Guy Quiz</h1>
                 <p className="text-sm leading-6 text-gray-300">
                     Take this quiz to find out how much you know about the hit animated
