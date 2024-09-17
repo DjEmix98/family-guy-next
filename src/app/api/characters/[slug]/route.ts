@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import characters from "@/data/characters.json";
 import quotes from "@/data/quotes.json";
-import { Quotes } from "@/type/qoutes.type";
+import { Quotes } from "@/type/quote.type";
 import { RequestQueryParams } from "@/type/request-query-params";
 
 export async function GET(
