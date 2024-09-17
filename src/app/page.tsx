@@ -5,7 +5,7 @@ import { getAllCharacters } from "@/lib/characters";
 export default async function Home() {
   const data = await getAllCharacters()
   return (
-    <main className="grid grid-cols-2 gap-1 py-5 md:grid-cols-3 lg:grid-cols-4">
+    <section className="grid grid-cols-2 gap-1 py-5 md:grid-cols-3 lg:grid-cols-4">
       {data?.map(item => {
         return (
           <Link
@@ -15,7 +15,7 @@ export default async function Home() {
           >
             <Image
               src={item.avatar}
-              alt=""
+              alt={item.name}
               className="transition-all duration-500 hover:scale-110 hover:-rotate-2"
               width={500}
               height={500}
@@ -23,6 +23,6 @@ export default async function Home() {
           </Link>
         )
       })}
-    </main>
+    </section>
   );
 }
