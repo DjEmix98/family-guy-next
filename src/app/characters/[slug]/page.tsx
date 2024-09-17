@@ -35,12 +35,12 @@ export default async function Page({ params }: RequestQueryParams<{ slug: string
           return (
             <li
               key={image}
-              className="relative flex overflow-hidden bg-gray-900 rounded-xl"
+              className="relative flex overflow-hidden bg-gray-900 rounded-xl w-max"
             >
               <Image
                 className="transition-all duration-500 hover:scale-110 hover:rotate-2"
                 src={image}
-                alt=""
+                alt={character.name}
                 width={760}
                 height={435}
               />
