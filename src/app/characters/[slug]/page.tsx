@@ -30,12 +30,12 @@ export default async function Page({ params }: RequestQueryParams<{ slug: string
         </ul>
       </div>
       <p className="text-sm leading-6">{character.description}</p>
-      <ul className="grid gap-2 sm:grid-cols-2">
+      <ul className="grid gap-2 xl:grid-cols-2">
         {character.images.map((image) => {
           return (
             <li
               key={image}
-              className="relative flex overflow-hidden bg-gray-900 rounded-xl w-max"
+              className="flex overflow-hidden bg-gray-900 rounded-xl md:w-max w-full"
             >
               <Image
                 className="transition-all duration-500 hover:scale-110 hover:rotate-2"
