@@ -1,9 +1,8 @@
 import { Character } from "@/type/character.type";
 import { Quotes } from "@/type/quote.type";
-import { LOCAL_HOST_EP } from "@/utils/endpoint";
 
 export async function getAllCharacters(): Promise<Character[]> {
-    const data = await fetch(`${LOCAL_HOST_EP}/characters`)
+    const data = await fetch(`${process.env.ENDPOINT}/characters`)
   
     if (!data.ok) {
       throw new Error('Failed to fetch data')
@@ -12,7 +11,7 @@ export async function getAllCharacters(): Promise<Character[]> {
   }
 
   export async function getCharacterBySlug(slug: string): Promise<Quotes> {
-    const data = await fetch(`${LOCAL_HOST_EP}/characters/${slug}`);
+    const data = await fetch(`${process.env.ENDPOINT}/characters/${slug}`);
   
     if (!data.ok) {
       throw new Error("Failed to fetch data");

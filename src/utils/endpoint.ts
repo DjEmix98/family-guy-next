@@ -1,1 +1,0 @@
-export const LOCAL_HOST_EP = 'http://localhost:3000/api';
